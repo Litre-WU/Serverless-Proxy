@@ -1,2 +1,2 @@
 # proxy_pool
-使用免费的Serverless服务搭建代理IP池
+使用免费的Serverless服务搭建高质量代理IP池
