@@ -8,6 +8,13 @@ http.createServer((req, res) => {
 
     console.log(path, query);
 
+    if (path === '/') {
+        res.write('Hello World');
+        res.end();
+        return;
+    }
+
+
     const params = typeof query.params === 'string' ? new URLSearchParams(JSON.parse(query.params)) : query.params;
     const url = params ? `${query.url}?${params}` : query.url;
     const body = typeof query.body === 'string' ? JSON.parse(query.body) : query.body;
